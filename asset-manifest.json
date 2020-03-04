@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tcole8899.github.io/tcole8899.github.io/static/css/main.d1b05096.chunk.css",
+    "main.js": "/tcole8899.github.io/tcole8899.github.io/static/js/main.27b62628.chunk.js",
+    "main.js.map": "/tcole8899.github.io/tcole8899.github.io/static/js/main.27b62628.chunk.js.map",
+    "runtime-main.js": "/tcole8899.github.io/tcole8899.github.io/static/js/runtime-main.940c11f8.js",
+    "runtime-main.js.map": "/tcole8899.github.io/tcole8899.github.io/static/js/runtime-main.940c11f8.js.map",
+    "static/js/2.96a24132.chunk.js": "/tcole8899.github.io/tcole8899.github.io/static/js/2.96a24132.chunk.js",
+    "static/js/2.96a24132.chunk.js.map": "/tcole8899.github.io/tcole8899.github.io/static/js/2.96a24132.chunk.js.map",
+    "index.html": "/tcole8899.github.io/tcole8899.github.io/index.html",
+    "precache-manifest.727b29c7f67fb3e57b8e32bce09e4df2.js": "/tcole8899.github.io/tcole8899.github.io/precache-manifest.727b29c7f67fb3e57b8e32bce09e4df2.js",
+    "service-worker.js": "/tcole8899.github.io/tcole8899.github.io/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/tcole8899.github.io/tcole8899.github.io/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.96a24132.chunk.js.LICENSE.txt": "/tcole8899.github.io/tcole8899.github.io/static/js/2.96a24132.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/tcole8899.github.io/tcole8899.github.io/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.940c11f8.js",
+    "static/js/2.96a24132.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.27b62628.chunk.js"
+  ]
+}
