@@ -5,7 +5,7 @@
   background-image: url("./components/urilogo.png");
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: 38%;
+  background-size: 80vh;
 }
 
 .App-header {
@@ -47,19 +47,22 @@
   background-color: black;
   width: 55%;
   height: 60vh;
-  left: 50vh;
+  left: 22.5%;
   top: 5vh;
   box-shadow: 0px 0px 10px 2px rgb(12, 12, 12);
   overflow-y: scroll;
+  padding-right: 10px;
 }
 
 .cmd {
   background-color: white;
   color: black;
   text-align: left;
+  width: inherit;
   font-size: 12px;
   padding: 5px;
   border: transparent;
+  position: fixed;
 }
 
 .cmdimg {
@@ -73,8 +76,8 @@
 }
 
 .x:hover {
-  background-color: red;
-  box-shadow: 0px 0px 0px 6px red;
+  background-color: rgb(255, 27, 27);
+  box-shadow: 0px 0px 0px 6px rgb(255, 27, 27);
 }
 
 .cmdtext {
@@ -82,7 +85,7 @@
   color: #1fd81f;
   font-size: 14px;
   font-family: 'Lucida Console';
-  margin-top: 3px;
+  margin-top: 30px;
   padding-left: 1px;
   padding-bottom: 1px;
 }
@@ -98,8 +101,8 @@
 }
 
 .enter {
-  width: 1px;
-  height: 1px;
+  width: inherit;
+  height: 200px;
   background-color: black;
   border: black;
 }
