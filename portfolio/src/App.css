@@ -46,10 +46,11 @@
   position: relative;
   background-color: black;
   width: 55%;
-  height: 50vh;
+  height: 60vh;
   left: 50vh;
   top: 5vh;
-  box-shadow: 1px 1px 1px 1px rgb(12, 12, 12);
+  box-shadow: 0px 0px 10px 2px rgb(12, 12, 12);
+  overflow-y: scroll;
 }
 
 .cmd {
@@ -58,7 +59,7 @@
   text-align: left;
   font-size: 12px;
   padding: 5px;
-  overflow: show;
+  border: transparent;
 }
 
 .cmdimg {
@@ -71,12 +72,19 @@
   width: 15px;
 }
 
+.x:hover {
+  background-color: red;
+  box-shadow: 0px 0px 0px 6px red;
+}
+
 .cmdtext {
   text-align: left;
   color: #1fd81f;
   font-size: 14px;
   font-family: 'Lucida Console';
   margin-top: 3px;
+  padding-left: 1px;
+  padding-bottom: 1px;
 }
 
 .blink_me {
@@ -87,4 +95,15 @@
   50% {
     opacity: 0;
   }
+}
+
+.enter {
+  width: 1px;
+  height: 1px;
+  background-color: black;
+  border: black;
+}
+
+.enter:focus {
+  outline: none;
 }
