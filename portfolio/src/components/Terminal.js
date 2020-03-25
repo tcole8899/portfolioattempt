@@ -8,26 +8,43 @@ class Terminal extends React.Component {
         this.Input = React.createRef();
         this.state = {
             buttonVal: this.props.buttonVal,
+            loading: true,
             aboutMe: false
         };
         this.keyPressed = this.keyPressed.bind(this)
+        this.toggleContent = this.toggleContent.bind(this)
+        this.timer = setTimeout(this.toggleContent, 1750);
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.buttonVal !== this.props.buttonVal) {
             this.setState({
                 buttonVal: nextProps.buttonVal,
-                aboutMe: false
+                aboutMe: false,
+                loading: true
             });
         }
         this.Input.current.focus();
+        this.timer = setTimeout(this.toggleContent, 1750);
     }
 
     keyPressed(event) {
         if (event.key === "Enter" && this.state.buttonVal === "aboutMe") {
             console.log("working")
             this.setState({
-                aboutMe: true
+                loading: true
+            })
+        }
+
+    }
+
+    toggleContent() {
+        this.setState({
+            loading: false
+        })
+        if (this.state.buttonVal === "aboutMe") {
+            this.setState({
+                aboutMe: true,
             })
         }
     }
@@ -53,7 +70,7 @@ class Terminal extends React.Component {
             Minor has gone over a majority of the CompTIA A+ Certification as well as a whole class on
             Information Assurance. These classes mostly covered policy and good practices as well as
             setting up and working with virtual machines.<br />
-            <br />
+                <br />
                 <u><b>WORK EXPERIENCE:</b></u><br />
             I am currently employeed as a Men's Gymnastics Coach at Aim High Academy and an Intern at SquadLocker.
                 <ul>
@@ -90,12 +107,18 @@ class Terminal extends React.Component {
                 </header>
                 <p className="cmdtext">Microsoft Windows [Version 10.0.5555.555] <br /> (c) 2019 Microsoft Corporation. All right reserved.</p>
                 <p className="cmdtext">
-                    C:\Users\Tyler\{this.state.buttonVal}> <i>[*Press Enter to Continue*]</i> {this.state.aboutMe ? this.renderAboutMe() : null} <b className="blink_me">_ </b>
+                    C:\Users\Tyler\{this.state.buttonVal}> <b className="blink_me">_ </b>
+                {
+                        this.state.loading ?
+                            <i data-content="  . . . . . . . . . . . . . . . . . . . ." className="load">
+                                . . . . . . . . . . . . . . . . . . . .</i> : null
+                }
+                {this.state.aboutMe ? this.renderAboutMe() : null}
                 </p>
-                <input 
-                    id="input" 
-                    className="enter" 
-                    onKeyPress={this.keyPressed} 
+                <input
+                    id="input"
+                    className="enter"
+                    onKeyPress={this.keyPressed}
                     autoFocus={true}
                     ref={this.Input} >
                 </input>

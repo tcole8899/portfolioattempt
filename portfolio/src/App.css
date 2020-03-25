@@ -92,11 +92,19 @@
 
 .blink_me {
   animation: blinker 1s step-start infinite;
+  position: relative;
+  padding-left: 5px;
 }
 
 @keyframes blinker {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes wait {
+  from {
+    color: #000;
   }
 }
 
@@ -109,4 +117,40 @@
 
 .enter:focus {
   outline: none;
+}
+
+.load {
+	position: relative;
+	color: transparent;	
+}
+
+@keyframes loading {
+	from { 
+    max-width: 0;
+    max-height: 12px;
+  }
+}
+
+.load:before {
+	content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  color: #1fd81f;
+  max-width: 30em;
+  max-height: 12px;
+	animation: loading 1.5s linear;
+}
+
+.contactBar {
+  width: 100vh;
+  position: relative;
+  margin-top: -20px;
+}
+
+.contactImg {
+  width: 25px;
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }

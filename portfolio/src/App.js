@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import github from './components/GitHub-logo.svg';
+import linked from './components/linkedin.png';
+import gmail from './components/Gmail-Logo.png';
 import Terminal from './components/Terminal.js';
 
 class App extends React.Component {
@@ -32,6 +35,11 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <p >Tyler Cole Portfolio</p>
+          <div className="contactBar">
+            <a href="https://www.github.com/tcole8899"><img src={github} alt="" className="contactImg" /></a>
+            <a href="https://www.linkedin.com/in/tyler-cole-408364161"><img src={linked} alt="" className="contactImg" /></a>
+            <a href="mailto:tylercole8899@gmail.com"><img src={gmail} alt="" className="contactImg" /></a>
+          </div>
           <div className="navBar">
             <button className="navBut" value="aboutMe" onClick={this.toggleTerminal}>About Me</button>
             <button className="navBut" value="Math" onClick={this.toggleTerminal}>Math</button>
