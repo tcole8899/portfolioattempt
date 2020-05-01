@@ -1,0 +1,64 @@
+{
+    "Education": [
+        {
+            "title": "Linear Algebra",
+            "description": "Covered matricies, wrote paper on page rank algorithm."
+        },
+        {
+            "title": "Calculus 2",
+            "description": "Covered several strategies for solving different types of integrals"
+        },
+        {
+            "title": "Applied Combinatorics",
+            "description": "Topics included combinations, arrangements, selections, graph theory, and solving both homogeneous and inhomogeneous recurrence relations."
+        },
+        {
+            "title": "Programming for Data Science",
+            "description": "data manipulation and visualization along with introduction to training machine learning models and working with AWS"
+        },
+        {
+            "title": "Software Engineering",
+            "description": "Covered the software engineering process and best practices including methods such as waterfall, agile, and scrum. Also worked in a group to build a airline flight aggregator using react and a prebuilt api."
+        },
+        {
+            "title": "Data Structures and Algorithms",
+            "description": "Covered sorting algorithms with runtimes. Also covered data structures ranging from linked lists to red/black trees and hash tables."
+        }
+    ],
+    "Projects": [
+        {
+            "title": "Flight Aggregator",
+            "description": "Group project made in my software engineering course. Front-end application to compile flights from several different airlines."
+        },
+        {
+            "title": "Security Threats to the U.S. Power Grid",
+            "description": "Paper on a previous 'cyber attack' on the US power grid that showed just how vulnerable our infrastructure can be."
+        },
+        {
+            "title": "Artificial Neural Network",
+            "description": "TODO"
+        },
+        {
+            "title": "Djikstra's?",
+            "description": "demonstrate knowlege of data structures and algorithms by implementing a previous assignment. TODO"
+        }
+    ],
+    "Experience": [
+        {
+            "title": "Squadlocker",
+            "description": "Business Analysis and Software engineering internship. Taught me how to use SQL on a professional level and gave me a foundation in learning React.js"
+        },
+        {
+            "title": "ReactJS",
+            "description": "Professionally used at Squadlocker, used to build this portfolio, and group project for school."
+        },
+        {
+            "title": "SQL",
+            "description": "Used professionally for Squadlocker"
+        },
+        {
+            "title": "Aim High Academy",
+            "description": "Current Employment. I teach gymnastics to kids ages 4 - 18 in both reacreational and competetive programs."
+        }
+    ]
+}

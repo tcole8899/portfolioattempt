@@ -2,10 +2,11 @@
   text-align: center;
   background-color: #282c34;
   height: 100vh;
-  background-image: url("./components/urilogo.png");
+  background-image: url("./components/pictures/urilogo.png");
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: 80vh;
+  background-position-x: center;
+  background-position-y: 80%;
+  background-size: 75vh;
 }
 
 .App-header {
@@ -91,7 +92,7 @@
 }
 
 .blink_me {
-  animation: blinker 1s step-start infinite;
+  animation: blinker 0.5s step-start infinite;
   position: relative;
   padding-left: 5px;
 }
@@ -110,7 +111,7 @@
 
 .enter {
   width: inherit;
-  height: 200px;
+  height: 20px;
   background-color: black;
   border: black;
 }
@@ -154,3 +155,53 @@
   padding-right: 5px;
   padding-bottom: 5px;
 }
+
+.tablediv {
+  width: 90%;
+  height: 75%;
+  background-color: rgb(22, 22, 22);
+  margin: 0 auto;
+  border-radius: 10px;
+  opacity: 0.85;
+  padding-top: 20px;
+}
+
+.organizer {
+  width: 60%;
+  height: fit-content;
+  position: relative;
+  left: 22.5%;
+}
+
+.bubble {
+  max-width: fit-content;
+  min-width: 25%;
+  height: fit-content;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+  align-self: center;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.continue {
+  border-top-color: rgb(206, 203, 203);
+  color: grey;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  background-color: white;
+  width: stretch;
+  border-radius: 5px;
+}
+
+.continue:hover {
+  background-color: #ebe6e6;
+}
+
+.continue:focus {
+  outline: none;
+}
+

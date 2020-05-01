@@ -1,6 +1,6 @@
 import React from 'react';
-import cmdimg from './cmdimg.png';
-import x from './x.png';
+import cmdimg from './pictures/cmdimg.png';
+import x from './pictures/x.png';
 
 class Terminal extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class Terminal extends React.Component {
         };
         this.keyPressed = this.keyPressed.bind(this)
         this.toggleContent = this.toggleContent.bind(this)
-        this.timer = setTimeout(this.toggleContent, 1750);
+        this.timer = setTimeout(this.toggleContent, 1500);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -21,11 +21,12 @@ class Terminal extends React.Component {
             this.setState({
                 buttonVal: nextProps.buttonVal,
                 aboutMe: false,
+                contact: false,
                 loading: true
             });
         }
         this.Input.current.focus();
-        this.timer = setTimeout(this.toggleContent, 1750);
+        this.timer = setTimeout(this.toggleContent, 1500);
     }
 
     keyPressed(event) {
@@ -45,6 +46,11 @@ class Terminal extends React.Component {
         if (this.state.buttonVal === "aboutMe") {
             this.setState({
                 aboutMe: true,
+            })
+        }
+        if (this.state.buttonVal === "Contact") {
+            this.setState({
+                contact: true,
             })
         }
     }
@@ -88,6 +94,17 @@ class Terminal extends React.Component {
         )
     }
 
+    renderContact() {
+        return(
+            <p className="cmdtext">
+                <u><b>Tyler Cole</b></u>
+                <p><b>Email: </b> <a className="cmdtext" href="mailto:tylercole8899@gmail.com"> tylercole8899@gmail.com</a></p>
+                <p><b>Github: </b> <a className="cmdtext" href="https://github.com/tcole8899"> https://github.com/tcole8899</a></p>
+                <p><b>LinkedIn: </b> <a className="cmdtext" href="https://www.linkedin.com/in/tyler-cole-408364161"> https://www.linkedin.com/in/tyler-cole-408364161</a></p>
+            </p>
+        )
+    }
+
     renderTerminal() {
         return (
             <div className="terminal">
@@ -97,8 +114,8 @@ class Terminal extends React.Component {
                         alt=""
                         className="cmdimg"
                     />
-            Command Prompt
-            <img
+                    Command Prompt
+                    <img
                         src={x}
                         alt=""
                         className="x"
@@ -108,12 +125,13 @@ class Terminal extends React.Component {
                 <p className="cmdtext">Microsoft Windows [Version 10.0.5555.555] <br /> (c) 2019 Microsoft Corporation. All right reserved.</p>
                 <p className="cmdtext">
                     C:\Users\Tyler\{this.state.buttonVal}> <b className="blink_me">_ </b>
-                {
+                    {
                         this.state.loading ?
                             <i data-content="  . . . . . . . . . . . . . . . . . . . ." className="load">
                                 . . . . . . . . . . . . . . . . . . . .</i> : null
-                }
-                {this.state.aboutMe ? this.renderAboutMe() : null}
+                    }
+                    {this.state.aboutMe ? this.renderAboutMe() : null}
+                    {this.state.contact ? this.renderContact() : null}
                 </p>
                 <input
                     id="input"
